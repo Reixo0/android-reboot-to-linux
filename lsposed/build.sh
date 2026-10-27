@@ -1,16 +1,16 @@
 #!/bin/sh
-# Builds out/reboot-linux-lsposed/reboot-linux-lsposed.apk without Gradle.
+# Builds out/lsposed/reboot-linux-lsposed.apk without Gradle.
 # Tools: an AOSP-style tree (EVO default ~/evo12) for the JDK, android.jar,
 # aapt2, d8, zipalign and apksigner. The signing key is generated once in
-# out/reboot-linux-lsposed/key.p12 (keep it: updates need the same key).
+# out/lsposed/key.p12 (keep it: updates need the same key).
 set -eu
 here=$(cd "$(dirname "$0")" && pwd)
-top=$(cd "$here/../../.." && pwd)
+top=$(cd "$here/.." && pwd)
 evo=${EVO:-$HOME/evo12}
 jdk=$evo/prebuilts/jdk/jdk21/linux-x86/bin
 tools=$evo/prebuilts/sdk/tools/linux/bin
 jar=$evo/prebuilts/sdk/36/public/android.jar
-o=$top/out/reboot-linux-lsposed
+o=$top/out/lsposed
 rm -rf "$o/build"; mkdir -p "$o/build/classes" "$o/build/stubs" "$o/build/dex"
 
 # Xposed API stubs: compile against them, never package them

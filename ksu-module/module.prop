@@ -1,0 +1,6 @@
+id=nx809j_reboot_linux
+name=Reboot to Linux
+version=4
+versionCode=4
+author=Reixo
+description=Action button: reboot straight to Linux through the Canoe boot manager's boot-once record (entry "linux", see /data/adb/reboot-to-linux.conf).
